@@ -4,9 +4,9 @@ import React, { Component } from "react";
 class Main extends Component{
     render(){
         return (
-            <div>
-                
-            </div>
+            <main className="container">
+                <img src="/assets/images/ed.png" />
+            </main>
         )
     }
 }

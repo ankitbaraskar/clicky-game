@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 
 
-class Nav extends Component{
-    render(){
+class Nav extends Component {
+    render() {
         return (
             <nav className="navbar">
                 <ul>
                     <li className="brand">
                         <a href="/">Clicky Game</a>
                     </li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        Click an image to begin!
+                    </li>
+                    <li>
+                        Score: 0 | Top Score: 0
+                    </li>
                 </ul>
             </nav>
         )
