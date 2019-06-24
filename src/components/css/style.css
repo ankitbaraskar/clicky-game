@@ -1,3 +1,37 @@
-.navbar{
-    color: red;
+/* elements */
+nav {
+    background-color: #5133a4;
+}
+
+/* classes */
+.nav-item {
+    color: white;
+    font-size:30px;
+}
+/* .card img{
+    width: 160px;
+    height: 160px;
+} */
+.card-img-top {
+    max-height: 200px;
+    min-height: 150px;
+    object-fit: cover;
+}
+
+/* IDs */
+#nav {
+    display: table;
+    width: 100%;
+}
+/* #nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}  */
+#nav li {
+    display: table-cell;
+}
+#overwrite-navbar-brand {
+    color: white;
+    font-weight: bolder;
 }

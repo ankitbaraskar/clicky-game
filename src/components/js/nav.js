@@ -4,15 +4,16 @@ import React, { Component } from "react";
 class Nav extends Component {
     render() {
         return (
-            <nav className="navbar">
-                <ul>
-                    <li className="brand">
-                        <a href="/">Clicky Game</a>
-                    </li>
+            <nav className="navbar navbar-light">
+                
+                <ul className="navbar-nav" id="nav">
                     <li>
+                    <a className="navbar-brand nav-item" id="overwrite-navbar-brand" href="/">Clicky Game</a>
+                    </li>
+                    <li className="nav-item">
                         Click an image to begin!
                     </li>
-                    <li>
+                    <li className="nav-item">
                         Score: 0 | Top Score: 0
                     </li>
                 </ul>

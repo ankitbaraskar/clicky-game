@@ -1,11 +1,56 @@
 import React, { Component } from "react";
+import cartoons from "../../cartoons.json";
 
 
-class Main extends Component{
-    render(){
+class Main extends Component {
+    render() {
         return (
-            <main className="container">
-                <img src="/assets/images/ed.png" />
+            <main>
+
+                <div className="row">
+                    <div className="col-lg-3 card card-img-top">
+                        <img alt={cartoons[0].name} src={cartoons[0].image} />
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-lg-3 card card-img-top">
+                        <img alt={cartoons[0].name} src={cartoons[0].image} />
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-lg-3 card card-img-top">
+                        <img alt={cartoons[0].name} src={cartoons[0].image} />
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                    <div className="col-lg-3 card card-img-top">
+                        One of three columns
+                    </div>
+                </div>
             </main>
         )
     }
