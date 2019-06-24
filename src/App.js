@@ -10,7 +10,8 @@ class App extends Component {
     state = {
         cartoons: cartoons,
         score: 0,
-        topScore: 0
+        topScore: 0,
+        names: []
     };
 
     shuffleCartoons = () => {
@@ -39,6 +40,25 @@ class App extends Component {
 
     }
 
+    nameCheck = (name) => {
+
+        let previousListofNames = this.state.names;
+        if (previousListofNames.length > 0) {
+
+            if (previousListofNames.includes(name)) {
+                this.setState({ score: 0 });
+                this.setState({ names: [] });
+            } else {
+                previousListofNames.push(name);
+                this.setState({ names: previousListofNames });
+            }
+
+        } else if (previousListofNames.length === 0) {
+            previousListofNames.push(name);
+            this.setState({ names: previousListofNames });
+        }
+    }
+
     render() {
         return (
             <div>
@@ -48,6 +68,7 @@ class App extends Component {
                 />
                 <Header />
                 <Main
+                    nameCheck={this.nameCheck}
                     incrementScore={this.incrementScore}
                     shuffleCartoons={this.shuffleCartoons}
                     id={cartoons.id}
