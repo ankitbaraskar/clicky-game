@@ -43,6 +43,7 @@ class App extends Component {
     nameCheck = (name) => {
 
         let previousListofNames = this.state.names;
+        console.log(previousListofNames);
         if (previousListofNames.length > 0) {
 
             if (previousListofNames.includes(name)) {
