@@ -2,6 +2,10 @@ import React, { Component } from "react";
 
 
 class Nav extends Component {
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
             <nav className="navbar navbar-light">
@@ -14,7 +18,7 @@ class Nav extends Component {
                         Click an image to begin!
                     </li>
                     <li className="nav-item">
-                        Score: 0 | Top Score: 0
+                        Score: <span>{this.props.score}</span> | Top Score: <span>{this.props.topScore}</span>
                     </li>
                 </ul>
             </nav>
