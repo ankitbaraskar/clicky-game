@@ -72,10 +72,11 @@ class App extends Component {
                     nameCheck={this.nameCheck}
                     incrementScore={this.incrementScore}
                     shuffleCartoons={this.shuffleCartoons}
-                    id={cartoons.id}
-                    key={cartoons.id}
-                    name={cartoons.name}
-                    image={cartoons.image}
+                    cartoons={this.state.cartoons}
+                    // id={cartoons.id}
+                    // key={cartoons.id}
+                    // name={cartoons.name}
+                    // image={cartoons.image}
                 />
                 <Footer />
             </div>
