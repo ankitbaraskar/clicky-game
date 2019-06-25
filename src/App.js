@@ -36,27 +36,33 @@ class App extends Component {
             topScore = topScore + 1;
             this.setState({ topScore })
         }
+     
         this.setState({ score });
-
+  
     }
 
     nameCheck = (name) => {
 
         let previousListofNames = this.state.names;
+        console.log("used to be this array: ")
         console.log(previousListofNames);
         if (previousListofNames.length > 0) {
 
             if (previousListofNames.includes(name)) {
-                this.setState({ score: 0 });
-                this.setState({ names: [] });
+                let score = 0;
+                let names = [];
+
+                this.setState({ score },()=>console.log("score reset "));
+                this.setState({ names },()=>console.log("names array reset "));
+ 
             } else {
                 previousListofNames.push(name);
-                this.setState({ names: previousListofNames });
+                this.setState({ names: previousListofNames },()=>console.log(this.state));
             }
 
         } else if (previousListofNames.length === 0) {
             previousListofNames.push(name);
-            this.setState({ names: previousListofNames });
+            this.setState({ names: previousListofNames },()=>console.log(this.state));
         }
     }
 
